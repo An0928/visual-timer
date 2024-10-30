@@ -57,5 +57,5 @@ function playAlarm() {
 
 // 返回設置頁面
 function goBack() {
-    window.location.href = "timeSet.html";
+    window.location.href = "index.html";
 }

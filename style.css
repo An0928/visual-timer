@@ -1,0 +1,136 @@
+body {
+  padding-top: 180px;
+  background: #E1ECF4; /* 背景色：淡藍色 */
+  color: #2D3E50; /* 文字色：深藍灰 */
+  font-family: Lato, Sans-serif;
+  text-align: center;
+  margin: 0;
+}
+
+h1, h2 {
+  margin-bottom: 0.5em;
+}
+
+a {
+  color: #5C748D; /* 調整連結顏色 */
+}
+
+#page {
+  position: relative;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 800px;
+  background: #D9EAF7; /* 框色：柔和的淡藍色 */
+  color: #2D3E50;
+  text-align: center;
+  border-radius: 20px; /* 添加圓角 */
+}
+
+#timerParams {
+  max-width: 15em;
+  margin: 0 auto;
+  font-size: 1.3em;
+  color: #2D3E50;
+}
+
+#timerParams input {
+  font-family: inherit;
+  font-size: inherit;
+  color: #2D3E50;
+  background: #B8D1E4; /* 按鈕背景色：淡灰藍色 */
+  border: 1px solid #A2C1DA;
+  border-radius: 15px; /* 設置圓角 */
+  padding: 5px;
+}
+
+#timerParams input:focus {
+  border-color: #89AEC5;
+}
+
+#timerParams input.duration {
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+label.duration {
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+  font-weight: 300;
+}
+
+.duraSeparator {
+  display: inline-block;
+  width: 8%;
+}
+
+input#startBtn {
+  display: inline-block;
+  width: 100%;
+  border-radius: 15px;
+  background: #B8D1E4; /* 按鈕色：淡灰藍色 */
+  color: #2D3E50;
+  border: 1px solid #A2C1DA;
+}
+
+/* Header */
+#header {
+  padding-top: 0.2em;
+}
+
+#header h1 {
+  font-size: 1.5em;
+}
+
+#footer {
+  font-size: smaller;
+  margin-top: 2em;
+  padding: 0.5em;
+  border-top: solid #A2C1DA 1px;
+}
+
+h2 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Timer Container */
+#timerContainer {
+    position: relative; /* 相對定位 */
+    width: 300px; /* 餅圖外圍容器的寬度 */
+    height: 300px; /* 餅圖外圍容器的高度 */
+    margin: 0 auto; /* 取消左右邊距，保持居中 */
+}
+
+#pieTimer {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(#ffffff 0deg, #4CAF50 0deg); /* 開始顏色 */
+}
+
+#countdown {
+    position: absolute; /* 絕對定位 */
+    top: 115%; /* 調整上方位置，根據需要改變此數值 */
+    left: 50%; /* 水平居中 */
+    transform: translate(-50%, -50%); /* 調整水平位置 */
+    font-size: 2em;
+    color: #4CAF50;
+}
+
+#backButton {
+    position: absolute;
+    top: 90%; /* 垂直 */
+    left: 50%; /* 水平居中 */
+    transform: translate(-50%, -50%); /* 使按鈕居中對齊 */
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #4CAF50; /* 按鈕顏色 */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; /* 默認隱藏按鈕 */
+}

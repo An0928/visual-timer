@@ -22,7 +22,7 @@ function startCountdown() {
         if (remainingTime <= 0) {
             clearInterval(countdownInterval);
             document.getElementById('countdown').textContent = "00:00";
-            document.getElementById('pieTimer').style.background = '#ffffff'; // 餅圖變為全白
+            document.getElementById('pieTimer').style.background = '#FF0000'; // 餅圖變為全白
             document.getElementById('backButton').style.display = 'block'; // 顯示返回按鈕
             playAlarm(); // 播放音效
         } else {
@@ -43,7 +43,7 @@ function formatTime(seconds) {
 // 更新餅圖的填充角度
 function updatePieTimer(remainingTime, totalDuration) {
     const percentComplete = (1 - (remainingTime / totalDuration)) * 360;
-    document.getElementById('pieTimer').style.background = `conic-gradient(#ffffff ${percentComplete}deg, #4CAF50 ${percentComplete}deg)`;
+    document.getElementById('pieTimer').style.background = `conic-gradient(#FF0000 ${percentComplete}deg, #4CAF50 ${percentComplete}deg)`;
 }
 
 // 播放鈴聲

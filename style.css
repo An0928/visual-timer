@@ -99,16 +99,17 @@ h2 a {
 /* Timer Container */
 #timerContainer {
     position: relative; /* 相對定位 */
-    width: 300px; /* 餅圖外圍容器的寬度 */
-    height: 300px; /* 餅圖外圍容器的高度 */
+    width: 400px; /* 餅圖外圍容器的寬度 */
+    height: 400px; /* 餅圖外圍容器的高度 */
     margin: 0 auto; /* 取消左右邊距，保持居中 */
+	margin-top: -4cm; 
 }
 
 #pieTimer {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background: conic-gradient(#ffffff 0deg, #4CAF50 0deg); /* 開始顏色 */
+    background: conic-gradient(#FF0000 0deg, #4CAF50 0deg); /* 開始顏色 */
 }
 
 #countdown {
@@ -116,7 +117,7 @@ h2 a {
     top: 115%; /* 調整上方位置，根據需要改變此數值 */
     left: 50%; /* 水平居中 */
     transform: translate(-50%, -50%); /* 調整水平位置 */
-    font-size: 2em;
+    font-size: 4em;
     color: #4CAF50;
 }
 
@@ -133,4 +134,8 @@ h2 a {
     border-radius: 5px;
     cursor: pointer;
     display: none; /* 默認隱藏按鈕 */
+}
+
+#countdownTitle {
+    transform: translateY(-4cm); /* 向上移動 2cm */
 }

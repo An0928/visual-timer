@@ -106,11 +106,15 @@ h2 a {
 }
 
 #pieTimer {
+    position: absolute;
+    top: 0;
+    left: 0; /* 向左移動 50px */
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background: conic-gradient(#FF0000 0deg, #4CAF50 0deg); /* 開始顏色 */
+    background: conic-gradient(#FF0000 0deg, #4CAF50 0deg);
 }
+
 
 #countdown {
     position: absolute; /* 絕對定位 */
@@ -123,8 +127,8 @@ h2 a {
 
 #backButton {
     position: absolute;
-    top: 90%; /* 垂直 */
-    left: 50%; /* 水平居中 */
+    top: 40%; /* 垂直 */
+    left: 70%; /* 水平居中 */
     transform: translate(-50%, -50%); /* 使按鈕居中對齊 */
     padding: 10px 20px;
     font-size: 1em;
@@ -138,4 +142,27 @@ h2 a {
 
 #countdownTitle {
     transform: translateY(-4cm); /* 向上移動 2cm */
+}
+
+#pauseResumeButton {
+    position: absolute;
+    top: 50%; /* 垂直位置 */
+    left: 70%; /* 水平居中 */
+    transform: translate(-50%, -50%); /* 居中對齊 */
+    padding: 12px 25px; /* 按鈕內邊距 */
+    font-size: 1.2em; /* 字體大小 */
+    background-color: #FF7043; /* 暫停按鈕顏色（橘色） */
+    color: #ffffff; /* 文字顏色 */
+    border: none; /* 去掉邊框 */
+    border-radius: 25px; /* 圓角 */
+    cursor: pointer; /* 鼠標懸停時顯示手型 */
+    transition: background-color 0.3s; /* 漸變效果 */
+}
+
+#pauseResumeButton:hover {
+    background-color: #FF5722; /* 滑鼠懸停時變色 */
+}
+
+#pauseResumeButton:active {
+    background-color: #D84B1A; /* 按下按鈕時變色 */
 }

@@ -1,4 +1,7 @@
-let countdownInterval;
+let countdownInterval; // 計時器的 interval
+let isPaused = false; // 記錄計時器是否處於暫停狀態
+let pausedTime = null; // 暫存暫停時的剩餘時間
+let remainingTime; // 剩餘的時間
 
 // 讀取 URL 中的參數以獲取倒數時間
 function getDurationFromUrl() {
@@ -16,16 +19,18 @@ function startCountdown() {
         return;
     }
 
-    let remainingTime = totalDuration;
+    // 如果 remainingTime 為 null，表示是第一次啟動計時器
+    if (remainingTime == null) remainingTime = totalDuration;
 
     countdownInterval = setInterval(() => {
         if (remainingTime <= 0) {
             clearInterval(countdownInterval);
             document.getElementById('countdown').textContent = "00:00";
-            document.getElementById('pieTimer').style.background = '#FF0000'; // 餅圖變為全白
+            document.getElementById('pieTimer').style.background = '#FF0000'; // 餅圖變為全紅
             document.getElementById('backButton').style.display = 'block'; // 顯示返回按鈕
             playAlarm(); // 播放音效
-        } else {
+        } else if (!isPaused) {
+            // 更新倒數時間與餅圖
             document.getElementById('countdown').textContent = formatTime(remainingTime);
             updatePieTimer(remainingTime, totalDuration);
             remainingTime--;
@@ -58,4 +63,23 @@ function playAlarm() {
 // 返回設置頁面
 function goBack() {
     window.location.href = "index.html";
+}
+
+// 暫停/繼續功能
+function togglePauseResume() {
+    const button = document.getElementById('pauseResumeButton');
+
+    if (!isPaused) {
+        // 暫停計時
+        clearInterval(countdownInterval);
+        pausedTime = remainingTime; // 保存暫停時的剩餘時間
+        button.textContent = "繼續";
+    } else {
+        // 繼續計時
+        remainingTime = pausedTime; // 恢復剩餘時間
+        button.textContent = "暫停";
+        startCountdown();
+    }
+
+    isPaused = !isPaused; // 切換狀態
 }

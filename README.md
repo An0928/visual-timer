@@ -24,7 +24,4 @@ Visual Timer 是一個簡單易用的計時器應用程序，旨在幫助使用�
 - CSS
 - JavaScript
 
-## 聯絡資訊
-如果您有任何問題或建議，請隨時聯繫我：
-- 電子郵件：layannann@gmail.com
 
